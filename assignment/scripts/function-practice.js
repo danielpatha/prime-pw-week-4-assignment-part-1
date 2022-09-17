@@ -13,28 +13,31 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName() {
-  return 'Hello, Prime Academy!';
+function helloName(name) {
+  return 'Hello, ' + name + '!';
 }
 // Remember to call the function to test
-console.log(helloName());
+helloName('Daniel');
+console.log(helloName('Daniel'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber) {
-   return firstNumber + secondNumber;}
+   return firstNumber + secondNumber;
+}
 
 console.log(addNumbers(4,5));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( n1, n2, n3 ){
-  return n1 * n2 * n3;}
+  return n1 * n2 * n3;
+}
 
-  console.log(multiplyThree(3,4,9));
+console.log(multiplyThree(3,4,9));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
-function isPositive( number ) {
+function isPositive( number ){
   if ( number > 0 ){
     return true;
   }
@@ -54,36 +57,41 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 const array = [1,2,3,4];
 
 function getLast(x) {
-if(x.length ===0){
- console.log('undefined'); return undefined;
-}
-else {console.log(x[x.length - 1])};
+  if(x.length ===0){
+  console.log('undefined'); return undefined;
+  }
+    else {
+      console.log(x[x.length - 1])
+    };
+    return undefined
 }
 getLast(array);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-let answer = '';
-for(let i = 0; i < array.length; i++){
-  if ( value === array[i]) {
-   answer = true;
+function find(value){
+  for(let i = 0; i < array.length; i++){
+  if (value === array[i]) {
+    return true;
+    }
+      else{return false
+      }
   }
-  else {answer = false};
 }
-if(answer === true){
-  console.log(true)
-}
-else{console.log(false)}
-return answer;
-}
-find(3,array);
+
+console.log(find(6));
+
+
+
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+function isFirstLetter(letter, string) {
+
+}
 
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
